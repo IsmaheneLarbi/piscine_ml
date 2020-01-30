@@ -1,5 +1,13 @@
 #!/usr/local/bin/python3
 
+#it tells us HOW MUCH variation from the m ean exists
+#low std deviation tells us that the data is clustered around the mean
+#high std deviation tells us the data is dispersed over a wide array of values
+#ex : can tell us if a behaviour is oridinay or not 
+#sigma, ecart-type
+# the difference between x and the mean is squared so they re all positive and dont cancel each other out .
+#the unsquaring we do later (sq root) allows us to counteract the squaring done earlier `expressing the values in their orginal unit`
+
 import numpy as n
 import types as t
 from inspect import signature
@@ -40,3 +48,8 @@ def variance(x):
         sum += (i - m) ** 2
     return (sum / len(x))
 
+def std(x):
+    return variance(x) ** 0.5
+
+# X = n.array([0, 15, -9, 7, 12, 3, -21])
+# print(std(X))

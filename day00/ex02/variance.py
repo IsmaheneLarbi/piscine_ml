@@ -1,5 +1,8 @@
 #!/usr/local/bin/python3
 
+# variance tells us the distance a set of data has from the mean,
+# it indicates how far the data is spread out
+
 import numpy as n
 import types as t
 from inspect import signature
